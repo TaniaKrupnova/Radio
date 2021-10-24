@@ -165,13 +165,13 @@ class RadioTest {
         assertEquals(expected, actual);
     }
 // volume
-   Radio radioVolume = new Radio(); 
+   
 @Test
 public void increaseVolumeFromBottomLimit() {
 
     
-    radioVolume.setVolume(0);
-    int actual = radioVolume.increaseVolume();
+    radioStation.setVolume(0);
+    int actual = radioStation.increaseVolume();
     int expected = 1;
     assertEquals(expected, actual);
     }
@@ -179,8 +179,8 @@ public void increaseVolumeFromBottomLimit() {
     public void increaseVolumePreCentre() {
 
         
-        radioVolume.setVolume(5);
-        int actual = radioVolume.increaseVolume();
+        radioStation.setVolume(5);
+        int actual = radioStation.increaseVolume();
         int expected = 6;
         assertEquals(expected, actual);
     }
@@ -189,8 +189,8 @@ public void increaseVolumeFromBottomLimit() {
     public void increaseVolumeMax() {
 
          
-        radioVolume.setVolume(100);
-        int actual = radioVolume.increaseVolume();
+        radioStation.setVolume(100);
+        int actual = radioStation.increaseVolume();
         int expected = 100;
         assertEquals(expected, actual);
     }
@@ -198,8 +198,8 @@ public void increaseVolumeFromBottomLimit() {
     public void increaseVolumePreMax() {
 
         
-        radioVolume.setVolume(99);
-        int actual = radioVolume.increaseVolume();
+        radioStation.setVolume(99);
+        int actual = radioStation.increaseVolume();
         int expected = 100;
         assertEquals(expected, actual);
     }
@@ -209,8 +209,8 @@ public void increaseVolumeFromBottomLimit() {
     public void decreaseVolumeMin() {
 
          
-        radioVolume.setVolume(0);
-        int actual = radioVolume.decreaseVolume();
+        radioStation.setVolume(0);
+        int actual = radioStation.decreaseVolume();
         int expected = 0;
         assertEquals(expected, actual);
     }
@@ -218,8 +218,8 @@ public void increaseVolumeFromBottomLimit() {
     public void decreaseVolumePreMin() {
 
          
-        radioVolume.setVolume(1);
-        int actual = radioVolume.decreaseVolume();
+        radioStation.setVolume(1);
+        int actual = radioStation.decreaseVolume();
         int expected = 0;
         assertEquals(expected, actual);
     }
@@ -227,8 +227,8 @@ public void increaseVolumeFromBottomLimit() {
     public void decreaseVolumeCentre() {
 
        
-        radioVolume.setVolume(60);
-        int actual = radioVolume.decreaseVolume();
+        radioStation.setVolume(60);
+        int actual = radioStation.decreaseVolume();
         int expected = 59;
         assertEquals(expected, actual);
     }
@@ -237,8 +237,8 @@ public void increaseVolumeFromBottomLimit() {
     public void decreaseVolumeFromUpperLimit() {
 
         
-        radioVolume.setVolume(100);
-        int actual = radioVolume.decreaseVolume();
+        radioStation.setVolume(100);
+        int actual = radioStation.decreaseVolume();
         int expected = 99;
         assertEquals(expected, actual);
     }
@@ -248,8 +248,8 @@ public void increaseVolumeFromBottomLimit() {
     public void setVolumeOverLimit() {
 
         
-        radioVolume.setVolume(111);
-        int actual = radioVolume.decreaseVolume();
+        radioStation.setVolume(111);
+        int actual = radioStation.decreaseVolume();
         int expected = 0;
         assertEquals(expected, actual);
     }
@@ -258,8 +258,8 @@ public void increaseVolumeFromBottomLimit() {
     public void setVolumeFromBottomLimit() {
 
         
-        radioVolume.setVolume(-1);
-        int actual = radioVolume.decreaseVolume();
+        radioStation.setVolume(-1);
+        int actual = radioStation.decreaseVolume();
         int expected = 0;
         assertEquals(expected, actual);
     }
