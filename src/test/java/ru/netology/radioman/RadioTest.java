@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
     
- Radio radioStation = new Radio(8);
+ Radio radioStation = new Radio(0);
     @Test
     public void increaseNumberStationMax() {
 
