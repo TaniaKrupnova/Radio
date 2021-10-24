@@ -53,8 +53,7 @@ public class Radio {
     public Radio (int totalStation) {
         this. totalStation = totalStation;
     }
-    pablic Radio () {
-    }
+    
         
     public int increaseVolume() {
         if (volume < 100) {
