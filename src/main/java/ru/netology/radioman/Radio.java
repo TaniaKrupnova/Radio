@@ -4,13 +4,14 @@ public class Radio {
 
     private int numberStation;
     private int volume;
+    private int totalStation = 10;
 
     public int increaseNumberStation() {
-        if (numberStation < 9) {
+        if (numberStation < totalStation -1) {
             numberStation = numberStation + 1;
             return numberStation;
         }
-        if (numberStation == 9) {
+        if (numberStation == totalStation -1) {
             numberStation = 0;
         }
         return numberStation;
@@ -23,7 +24,7 @@ public class Radio {
         }
 
         if (numberStation == 0) {
-            numberStation = 9;
+            numberStation = totalStation -1;
         }
         return numberStation;
     }
@@ -35,7 +36,7 @@ public class Radio {
 
     public void setNumberStation(int newNumberStation) {
 
-        if (newNumberStation > 9) {
+        if (newNumberStation > totalStation - 1) {
             return;
         }
         if (newNumberStation < 0) {
@@ -49,8 +50,14 @@ public class Radio {
         this.numberStation = newNumberStation;
 
     }
+    public Radio (int totalStation) {
+        this. totalStation = totalStation;
+    }
+    pablic Radio () {
+    }
+        
     public int increaseVolume() {
-        if (volume < 10) {
+        if (volume < 100) {
             volume = volume + 1;
         }
         return volume;
@@ -64,7 +71,7 @@ public class Radio {
     }
     public void setVolume(int newVolume) {
 
-        if (newVolume > 10) {
+        if (newVolume > 100) {
             return;
         }
         if (newVolume < 0) {
